@@ -26,3 +26,4 @@ replay_pid*
 # Markdown files (except README.md)
 *.md
 !README.md
+.vscode/
