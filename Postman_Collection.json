@@ -1,0 +1,283 @@
+{
+    "info": {
+        "_postman_id": "spring-jpa-security",
+        "name": "Spring JPA Security Analytics",
+        "description": "API collection for testing Student Teacher Analytics endpoints",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "GET Students by Department",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/v1/students/department/Computer%20Science",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "v1",
+                        "students",
+                        "department",
+                        "Computer Science"
+                    ]
+                },
+                "auth": {
+                    "type": "basic",
+                    "basic": [
+                        {
+                            "key": "username",
+                            "value": "engineer",
+                            "type": "string"
+                        },
+                        {
+                            "key": "password",
+                            "value": "password123",
+                            "type": "string"
+                        }
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "GET Average Mark by Department",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/v1/students/department/Computer%20Science/average-mark",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "v1",
+                        "students",
+                        "department",
+                        "Computer Science",
+                        "average-mark"
+                    ]
+                },
+                "auth": {
+                    "type": "basic",
+                    "basic": [
+                        {
+                            "key": "username",
+                            "value": "engineer",
+                            "type": "string"
+                        },
+                        {
+                            "key": "password",
+                            "value": "password123",
+                            "type": "string"
+                        }
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "GET Mechanical Engineering Students",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/v1/students/department/Mechanical%20Engineering",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "v1",
+                        "students",
+                        "department",
+                        "Mechanical Engineering"
+                    ]
+                },
+                "auth": {
+                    "type": "basic",
+                    "basic": [
+                        {
+                            "key": "username",
+                            "value": "engineer",
+                            "type": "string"
+                        },
+                        {
+                            "key": "password",
+                            "value": "password123",
+                            "type": "string"
+                        }
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "GET Average Mark - Mechanical Engineering",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/api/v1/students/department/Mechanical%20Engineering/average-mark",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "v1",
+                        "students",
+                        "department",
+                        "Mechanical Engineering",
+                        "average-mark"
+                    ]
+                },
+                "auth": {
+                    "type": "basic",
+                    "basic": [
+                        {
+                            "key": "username",
+                            "value": "engineer",
+                            "type": "string"
+                        },
+                        {
+                            "key": "password",
+                            "value": "password123",
+                            "type": "string"
+                        }
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "POST Create Teacher with Students",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"teacherId\": 3,\n  \"teacherName\": \"Dr. Michael Scott\",\n  \"department\": \"Civil Engineering\",\n  \"students\": [\n    {\n      \"rollNumber\": 401,\n      \"studentName\": \"Isabella Martinez\",\n      \"email\": \"isabella@example.com\",\n      \"mark\": 89.75\n    },\n    {\n      \"rollNumber\": 402,\n      \"studentName\": \"James Thompson\",\n      \"email\": \"james@example.com\",\n      \"mark\": 86.50\n    }\n  ]\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/api/v1/teachers",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "api",
+                        "v1",
+                        "teachers"
+                    ]
+                },
+                "auth": {
+                    "type": "basic",
+                    "basic": [
+                        {
+                            "key": "username",
+                            "value": "engineer",
+                            "type": "string"
+                        },
+                        {
+                            "key": "password",
+                            "value": "password123",
+                            "type": "string"
+                        }
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "GET Actuator Info",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/actuator/info",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "actuator",
+                        "info"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "GET Health Check",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/actuator/health",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "actuator",
+                        "health"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "GET Swagger UI",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/swagger-ui.html",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "8080",
+                    "path": [
+                        "swagger-ui.html"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ],
+    "auth": {
+        "type": "basic",
+        "basic": [
+            {
+                "key": "username",
+                "value": "engineer",
+                "type": "string"
+            },
+            {
+                "key": "password",
+                "value": "password123",
+                "type": "string"
+            }
+        ]
+    }
+}
